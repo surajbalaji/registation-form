@@ -11,7 +11,7 @@ if($conn->connect_error){
 }else{
     $stmt = $conn->prepare("insert into registration(name,email,psw,psw-repeat)
     values(?,?,?,?)")
-    $stmt->bind_param("sssssssi",$name, $email,  $pwd, $repwd);
+    $stmt->bind_param("ssss",$name, $email,  $pwd, $psw-repeat);
     $stmt->execute();
     echo"registration successfuly...";
     $stmt->close();
