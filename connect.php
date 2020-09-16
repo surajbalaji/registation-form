@@ -7,7 +7,7 @@ $psw-repeat = $_POST['psw-repeat'];
 //database connection
 $conn = new mysqli('localhost','root','','suraj');
 if($conn->connect_error){
-    die('connection failed   :' .$conn->connect_error);
+    die('connection failed'   : .$conn->connect_error);
 }else{
     $stmt = $conn->prepare("insert into registration(name,email,psw,psw-repeat)
     values(?,?,?,?)")
