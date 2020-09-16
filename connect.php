@@ -4,7 +4,7 @@ $email = $_POST['email'];
 $psw = $_POST['psw'];
 $psw-repeat = $_POST['psw-repeat'];
 
-
+//database connection
 $conn = new mysqli('localhost','root','','suraj');
 if($conn->connect_error){
     die('connection failed   :' .$conn->connect_error);
